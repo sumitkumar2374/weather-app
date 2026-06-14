@@ -1,0 +1,72 @@
+async function getWeather() {
+    const city = document.getElementById("city").value.trim();
+    const result = document.getElementById("result");
+
+    if (!city) {
+        result.innerHTML = "<h3>Please enter a city name!</h3>";
+        return;
+    }
+
+    const apiKey = "9f44ec8d79ad935af7002cbe2a8d9757";
+
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+
+    try {
+        const response = await fetch(url);
+
+        const data = await response.json();
+
+
+        if (data.cod != 200) {
+            result.style.display = "block";
+            result.innerHTML = "<h2>City Not Found!</h2>";
+            return;
+        }
+
+        const cityName = data.name;
+        const temp = data.main.temp;
+        const humidity = data.main.humidity;
+        const wind = data.wind.speed;
+        const weather = data.weather[0].main;
+
+        let emoji = "🌍";
+
+        if (weather === "Clear") {
+            emoji = "☀️";
+        }
+        else if (weather === "Clouds") {
+            emoji = "☁️";
+        }
+        else if (weather === "Rain") {
+            emoji = "🌧️";
+        }
+        else if (weather === "Mist") {
+            emoji = "🌫️";
+        }
+        else if (weather === "Thunderstorm") {
+            emoji = "⛈️";
+        }
+        else if (weather === "Snow") {
+            emoji = "❄️";
+        }
+
+        result.style.display = "block";
+
+        document.getElementById("result").innerHTML = `
+            <h2>${data.name}</h2>
+
+            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather-icon">
+
+            <h3>${data.weather[0].description}</h3>
+            <p>🌡️ Temperature: ${data.main.temp}°C</p>
+            <p>💧 Humidity: ${data.main.humidity}%</p>
+            <p>💨 Wind: ${data.wind.speed} m/s</p>
+        `;
+
+    } catch (error) {
+        result.innerHTML = "<h2>Something went wrong! Try again.</h2>";
+        console.log(error);
+    }
+
+}
