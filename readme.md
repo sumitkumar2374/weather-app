@@ -7,7 +7,7 @@ A beautiful, minimal weather application with a glassmorphism UI built using **H
 ## 🚀 Live Project Preview
 
 <p align="center">
-  <img src="/weather.jpg." alt="Project Preview" width="90%">
+  <img src="/preview.png" alt="Project Preview" width="90%">
 </p>
 
 ---
