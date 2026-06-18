@@ -28,40 +28,40 @@ async function getWeather() {
         const temp = data.main.temp;
         const humidity = data.main.humidity;
         const wind = data.wind.speed;
-        const weather = data.weather[0].main;
+        const weather = data.weather[0].description;
 
-        let emoji = "🌍";
+        // let emoji = "🌍";
 
-        if (weather === "Clear") {
-            emoji = "☀️";
-        }
-        else if (weather === "Clouds") {
-            emoji = "☁️";
-        }
-        else if (weather === "Rain") {
-            emoji = "🌧️";
-        }
-        else if (weather === "Mist") {
-            emoji = "🌫️";
-        }
-        else if (weather === "Thunderstorm") {
-            emoji = "⛈️";
-        }
-        else if (weather === "Snow") {
-            emoji = "❄️";
-        }
+        // if (weather === "Clear") {
+        //     emoji = "☀️";
+        // }
+        // else if (weather === "Clouds") {
+        //     emoji = "☁️";
+        // }
+        // else if (weather === "Rain") {
+        //     emoji = "🌧️";
+        // }
+        // else if (weather === "Mist") {
+        //     emoji = "🌫️";
+        // }
+        // else if (weather === "Thunderstorm") {
+        //     emoji = "⛈️";
+        // }
+        // else if (weather === "Snow") {
+        //     emoji = "❄️";
+        // }
 
         result.style.display = "block";
 
         document.getElementById("result").innerHTML = `
-            <h2>${data.name}</h2>
+            <h2>${cityName}</h2>
 
             <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather-icon">
 
-            <h3>${data.weather[0].description}</h3>
-            <p>🌡️ Temperature: ${data.main.temp}°C</p>
-            <p>💧 Humidity: ${data.main.humidity}%</p>
-            <p>💨 Wind: ${data.wind.speed} m/s</p>
+            <h3>${weather}</h3>
+            <p>🌡️ Temperature: ${temp}°C</p>
+            <p>💧 Humidity: ${humidity}%</p>
+            <p>💨 Wind: ${wind} m/s</p>
         `;
 
     } catch (error) {
