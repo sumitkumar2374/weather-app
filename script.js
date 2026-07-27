@@ -70,3 +70,12 @@ async function getWeather() {
     }
 
 }
+
+// ye wala code ka kaam h ki placeholder me ja ke koi user enter pr click kre to search ho bs!
+const cityInput = document.getElementById("city");
+
+cityInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        getWeather();
+    }
+});
