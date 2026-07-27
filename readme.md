@@ -19,7 +19,7 @@ A beautiful, minimal weather application with a glassmorphism UI built using **H
 - 🎨 Glassmorphism UI with custom sky background
 - ⌨️ Press **Enter** to search — no click needed
 - 📱 Fully responsive for mobile & desktop
-- 🌦️ Dynamic weather icons from OpenWeatherMap
+- 🌦️ Dynamic weather icons from ```OpenWeatherMap ```
 
 ---
 
@@ -46,7 +46,7 @@ cd weather-app
 ### 2. Get your API Key
 
 - Go to [openweathermap.org](https://openweathermap.org/api) and create a free account
-- Copy your API key from the dashboard
+- Copy your ```API key ``` from the dashboard
 
 ### 3. Add your API Key
 
@@ -85,9 +85,9 @@ weather-app/
 
 ## 📸 How It Works
 
-1. User enters a city name in the search box
-2. App fetches live data from OpenWeatherMap API
-3. Temperature, humidity, wind speed & weather icon are displayed
+1. User enters a ```city name ``` in the search box
+2. App fetches live data from ```OpenWeatherMap API ```
+3. ```Temperature ```, ```humidity ```, ```wind speed ``` & ```weather icon ``` are displayed
 4. Error message shown if city is not found
 
 ---
