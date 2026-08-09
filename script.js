@@ -17,6 +17,8 @@ async function getWeather() {
 
         const data = await response.json();
 
+        console.log(data);
+
 
         if (data.cod != 200) {
             result.style.display = "block";
