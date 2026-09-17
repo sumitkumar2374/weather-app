@@ -11,15 +11,16 @@ flowchart TD
     A[👤 User enters city name] --> B[🔍 Search city]
     B --> C[🌐 Fetch data from OpenWeatherMap API]
     C --> D{📡 API Response}
-    
+
     D -->|Success| E[🌤️ Display Weather Data]
     E --> F[🌡️ Temperature]
     E --> G[💧 Humidity]
     E --> H[💨 Wind Speed]
     E --> I[🌦️ Weather Icon]
-    
+
     D -->|Error| J[❌ Show Error Message]
     J --> B
+```
 
 ---
 
@@ -38,7 +39,7 @@ flowchart TD
 - 🎨 Glassmorphism UI with custom sky background
 - ⌨️ Press **Enter** to search — no click needed
 - 📱 Fully responsive for mobile & desktop
-- 🌦️ Dynamic weather icons from ```OpenWeatherMap ```
+- 🌦️ Dynamic weather icons from `OpenWeatherMap`
 
 ---
 
@@ -65,7 +66,7 @@ cd weather-app
 ### 2. Get your API Key
 
 - Go to [openweathermap.org](https://openweathermap.org/api) and create a free account
-- Copy your ```API key ``` from the dashboard
+- Copy your `API key` from the dashboard
 
 ### 3. Add your API Key
 
@@ -104,16 +105,16 @@ weather-app/
 
 ## 📸 How It Works
 
-1. User enters a ```city name ``` in the search box
-2. App fetches live data from ```OpenWeatherMap API ```
-3. ```Temperature ```, ```humidity ```, ```wind speed ``` & ```weather icon ``` are displayed
+1. User enters a `city name` in the search box
+2. App fetches live data from `OpenWeatherMap API`
+3. `Temperature`, `humidity`, `wind speed` & `weather icon` are displayed
 4. Error message shown if city is not found
 
 ---
 
 ## 🌐 Live Demo
 
-> Coming soon / [Click here to view](#)
+🌐 [**View Live Project**](https://weatherby-sumit.netlify.app/)
 
 ---
 
