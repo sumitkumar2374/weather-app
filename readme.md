@@ -4,6 +4,25 @@ A beautiful, minimal weather application with a glassmorphism UI built using **H
 
 ---
 
+## 🔀 Application Flow
+
+```mermaid
+flowchart TD
+    A[👤 User enters city name] --> B[🔍 Search city]
+    B --> C[🌐 Fetch data from OpenWeatherMap API]
+    C --> D{📡 API Response}
+    
+    D -->|Success| E[🌤️ Display Weather Data]
+    E --> F[🌡️ Temperature]
+    E --> G[💧 Humidity]
+    E --> H[💨 Wind Speed]
+    E --> I[🌦️ Weather Icon]
+    
+    D -->|Error| J[❌ Show Error Message]
+    J --> B
+
+---
+
 ## 🚀 Live Project Preview
 
 <p align="center">
